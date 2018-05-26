@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Play Pig Dice</title>
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <style media="screen">
+      body{
+        font-family: Poiret One;
+        font-weight: bold;
+        background-image: url('pig.jpg');
+      }
+      .main-container {
+        height: 500px;
+        width: 100%;
+      }
+      .player-1-container {
+        width: 50%;
+        height: 500px;
+        float:left;
+      }
+      .player-2-container {
+        width: 50%;
+        float:left;
+        height: 500px;
+      }
+      #score-1 {
+        width: 100%;
+        padding-top: 40px;
+        padding-bottom: 10px;
+      }
+      #score-2 {
+        width: 100%;
+        padding-top: 40px;
+        padding-bottom: 10px;
+      }
+      .sub-container {
+        width: 80%;
+        height:inherit;
+        margin-left: 10%;
+        margin-right: 10%;
+        background-color: rgba(1111, 1111, 1111, 0.8);
+      }
+      .active {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      #current-1 {
+        background-color: #EB4D4D;
+        color: white;
+        margin-top: 90px;
+        text-align: center;
+        width: 20%;
+        margin-left: 40%;
+        margin-right: 40%;
+      }
+      #current-2 {
+        color: white;
+        background-color: #EB4D4D;
+        margin-top: 90px;
+        text-align: center;
+        width: 20%;
+        margin-left: 40%;
+        margin-right: 40%;
+      }
+      h1.current-score-2 {
+        margin-bottom: 0px;
+      }
+      h1.current-score-1 {
+        margin-bottom: 0px;
+      }
+      button {
+        position: absolute;
+        width: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #555;
+        background: none;
+        border: none;
+        font-family: Lato;
+        font-size: 20px;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-weight: 300;
+    }
+    button:hover {
+       font-weight: 600;
+    }
+    button:hover i {
+      margin-right: 20px;
+    }
+    button:focus {
+        outline: none;
+    }
+    i {
+        color: #EB4D4D;
+        display: inline-block;
+        margin-right: 15px;
+        font-size: 32px;
+        line-height: 1;
+        vertical-align: text-top;
+        margin-top: -4px;
+        transition: margin 0.3s;
+    }
+    .finalScore {
+      position: absolute;
+      width: 200px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #555;
+      border: 1px;
+      padding-left: 20px;
+      border-radius: 3px;
+      font-family: Lato;
+      font-size: 20px;
+      font-weight: 300;
+      top: 540px;
+    }
+    .btn-new {
+      top: 95px;
+    }
+    .btn-roll {
+      top: 433px;
+    }
+    .btn-hold {
+      top: 497px;
+    }
+    .dice {
+        position: absolute;
+        left: 50%;
+        top: 178px;
+        transform: translateX(-50%);
+        height: 100px;
+        box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+    }
+    </style>
+  </head>
+  <body>
+    <h1 align = "center">
+      Pig Dice
+    </h1>
+    <div class="main-container">
+      <div class="sub-container">
+        <div class="player-1-container active">
+          <h1 class = "player-1-heading" align = "center"> Player 1</h1>
+          <h2 id="score-1" align = "center"> 0 </h2>
+          <h3 align = "center"> Score </h3>
+          <div id="current-1">
+            <h1 id="current-score-1">0</h1>
+            <span> Current Score </span>
+          </div>
+        </div>
+        <div class="player-2-container">
+          <h1 class = "player-2-heading" align = "center"> Player 2</h1>
+          <h2 id="score-2" align = "center"> 0 </h2>
+          <h3 align = "center"> Score </h3>
+          <div id="current-2">
+            <h1 id="current-score-2">0</h1>
+            <span> Current Score </span>
+          </div>
+        </div>
+        <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+        <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+        <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+        <input type="text" class = "finalScore" placeholder="Enter the finalScore"/>
+        <img src="dice-6.png" alt="Dice" class="dice" id="dice">
+      </div>
+    </div>
+    <script type="text/javascript" src = "script.js"></script>
+  </body>
+</html>
